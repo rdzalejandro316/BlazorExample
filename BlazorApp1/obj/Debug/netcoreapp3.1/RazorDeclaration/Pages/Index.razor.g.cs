@@ -83,27 +83,26 @@ using BlazorApp1.Tabs;
 #line hidden
 #nullable disable
 #nullable restore
+#line 1 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
+using Syncfusion.Blazor.Buttons;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
-using Syncfusion.Blazor.Grids;
+using Syncfusion.Blazor.Navigations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
-using System.Data;
+using Syncfusion.Blazor.Grids;
 
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 4 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
-using Syncfusion.Blazor.Charts;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -112,26 +111,61 @@ using Syncfusion.Blazor.Charts;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
-      
+#line 49 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
+       
+    private string UserName { get; set; } = "";
+    private string Password { get; set; } = "";
+    private Boolean DisableTab { get; set; } = true;
+    private Boolean Disabled { get; set; } = false;
+    private int SelectedTab { get; set; } = 0;
+    public List<Order> Orders { get; set; }
 
-    public class LineChartData
+    protected override void OnInitialized()
     {
-        public DateTime xValue { get; set; }
-        public double yValue { get; set; }
-        public double yValue1 { get; set; }
+        Orders = Enumerable.Range(1, 6).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
     }
-    public List<LineChartData> ChartData = new List<LineChartData>
-{
-        new LineChartData { xValue = new DateTime(2005, 01, 01), yValue = 21, yValue1 = 28 },
-        new LineChartData { xValue = new DateTime(2006, 01, 01), yValue = 24, yValue1 = 44 },
-        new LineChartData { xValue = new DateTime(2007, 01, 01), yValue = 36, yValue1 = 48 },
-        new LineChartData { xValue = new DateTime(2008, 01, 01), yValue = 38, yValue1 = 50 },
-        new LineChartData { xValue = new DateTime(2009, 01, 01), yValue = 54, yValue1 = 66 },
-        new LineChartData { xValue = new DateTime(2010, 01, 01), yValue = 57, yValue1 = 78 },
-        new LineChartData { xValue = new DateTime(2011, 01, 01), yValue = 70, yValue1 = 84 },
-    };
 
+    private void OnClicked()
+    {
+        if (this.UserName == "" && this.Password == "")
+        {
+            Console.WriteLine("clicked");
+        }
+        else if (this.UserName == "")
+        {
+            Console.WriteLine("Enter the username");
+        }
+        else if (this.Password == "")
+        {
+            Console.WriteLine("Enter the password");
+        }
+        else if (this.UserName.Length < 4)
+        {
+            Console.WriteLine("Username must be minimum 4 characters");
+        }
+        else
+        {
+            this.UserName = "";
+            this.Password = "";
+            this.DisableTab = false;
+            this.Disabled = true;
+            this.SelectedTab = 1;
+        }
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
 
 #line default
 #line hidden

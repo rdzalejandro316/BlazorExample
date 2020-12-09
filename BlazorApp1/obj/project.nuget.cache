@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RiYCs3iwCwXV+hERsBwwwW8PIch7J3bJh2l8bO5ipOwHgc0rYX8zxuYAJ3WcdLkgCEiAfeMSgQyhhlkK5nx4jw==",
+  "dgSpecHash": "86LoxH2dNI+95wrA5j6R5Y0sf0EdVeHzPyTExT1X2Jd/oyeOfx7a9LyRmC0uDyq8lcV/+CRVT3yB7w3hKV8gEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\aleja\\Desktop\\UTIL\\blazor\\BlazorApp1\\BlazorApp1.csproj",
   "expectedPackageFiles": [
@@ -23,14 +23,22 @@
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.8\\microsoft.extensions.primitives.3.1.8.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.jsinterop\\3.1.8\\microsoft.jsinterop.3.1.8.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
-    "C:\\Users\\aleja\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\syncfusion.blazor\\18.3.0.35\\syncfusion.blazor.18.3.0.35.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\syncfusion.excelexport.net.core\\18.3.0.35\\syncfusion.excelexport.net.core.18.3.0.35.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\syncfusion.licensing\\18.3.0.35\\syncfusion.licensing.18.3.0.35.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\syncfusion.pdfexport.net.core\\18.3.0.35\\syncfusion.pdfexport.net.core.18.3.0.35.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []

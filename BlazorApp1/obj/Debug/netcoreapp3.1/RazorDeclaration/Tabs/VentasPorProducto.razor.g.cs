@@ -89,6 +89,20 @@ using Syncfusion.Blazor.Grids;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
+using static BlazorApp1.Shared.MainLayout;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
+using static BlazorApp1.Tabs.TabMain;
+
+#line default
+#line hidden
+#nullable disable
     public partial class VentasPorProducto : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -96,6 +110,21 @@ using Syncfusion.Blazor.Grids;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 21 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
+       
+
+    [Parameter]
+    public string Text { get; set; }
+
+    [CascadingParameter]
+    protected Pshared sFather { get; set; }
+
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

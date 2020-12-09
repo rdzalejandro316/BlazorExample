@@ -1,5 +1,30 @@
-﻿<h3>VentasPorProducto</h3>
+﻿@using static BlazorApp1.Shared.MainLayout
+@using static BlazorApp1.Tabs.TabMain
+
+<h3>VentasPorProducto @Text</h3>
+
+@if (sFather.cuentas == null)
+{
+    <p>
+        coño
+    </p>
+}
+else
+{
+    <SfGrid DataSource="@sFather.cuentas" AllowPaging="true">
+    </SfGrid>
+}
+
+
+
 
 @code {
+
+    [Parameter]
+    public string Text { get; set; }
+
+    [CascadingParameter]
+    protected Pshared sFather { get; set; }
+
 
 }

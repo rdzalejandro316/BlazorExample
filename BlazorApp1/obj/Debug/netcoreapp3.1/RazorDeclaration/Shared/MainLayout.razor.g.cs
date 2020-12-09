@@ -89,13 +89,6 @@ using Syncfusion.Blazor.Grids;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Shared\MainLayout.razor"
-using Syncfusion.Blazor.Navigations;
-
-#line default
-#line hidden
-#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998

@@ -68,7 +68,13 @@ C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\BlazorApp1
 C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\scopedcss\bundle\BlazorApp1.styles.css
 C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\TabsExample.razor.g.cs
 C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\Razor\Pages\TabsExample.razor.g.cs
-C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\RazorDeclaration\Tabs\Configuracion.razor.g.cs
 C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\RazorDeclaration\Tabs\VentasPorProducto.razor.g.cs
-C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\Razor\Tabs\Configuracion.razor.g.cs
 C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\Razor\Tabs\VentasPorProducto.razor.g.cs
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\RazorDeclaration\Tabs\TabMain.razor.g.cs
+C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\obj\Debug\netcoreapp3.1\Razor\Tabs\TabMain.razor.g.cs
