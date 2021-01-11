@@ -90,6 +90,13 @@ using Syncfusion.Blazor.Grids;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Inputs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\TabMain.razor"
 using Syncfusion.Blazor.Navigations;
 

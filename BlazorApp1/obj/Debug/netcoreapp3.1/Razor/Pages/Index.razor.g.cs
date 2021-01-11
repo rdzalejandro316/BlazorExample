@@ -80,6 +80,13 @@ using BlazorApp1.Tabs;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Inputs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Pages\Index.razor"
 using Syncfusion.Blazor.Buttons;
 

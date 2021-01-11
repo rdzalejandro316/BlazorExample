@@ -89,6 +89,20 @@ using Syncfusion.Blazor.Grids;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Inputs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Buttons;
+
+#line default
+#line hidden
+#nullable disable
     public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

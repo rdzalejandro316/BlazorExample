@@ -90,6 +90,20 @@ using Syncfusion.Blazor.Grids;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Inputs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Buttons;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
 using static BlazorApp1.Shared.MainLayout;
 
@@ -103,6 +117,13 @@ using static BlazorApp1.Tabs.TabMain;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
+using Syncfusion.Blazor.Cards;
+
+#line default
+#line hidden
+#nullable disable
     public partial class VentasPorProducto : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -111,15 +132,37 @@ using static BlazorApp1.Tabs.TabMain;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
+#line 96 "C:\Users\aleja\Desktop\UTIL\blazor\BlazorApp1\Tabs\VentasPorProducto.razor"
        
 
-    [Parameter]
-    public string Text { get; set; }
-
     [CascadingParameter]
-    protected Pshared sFather { get; set; }
+    public Pshared sFather { get; set; }
 
+    public int Registros = 0;
+    public decimal Cantidades = 0;
+
+
+    private SfGrid<TabMain.Producto> DefaultGrid;
+
+
+    public async Task ExcelExport()
+    {
+        ExcelExportProperties ExcelProperties = new ExcelExportProperties();
+        ExcelTheme Theme = new ExcelTheme();
+
+        ExcelStyle ThemeStyle = new ExcelStyle()
+        {
+            FontName = "Segoe UI",
+            FontColor = "#666666",
+            FontSize = 12
+        };
+
+        Theme.Header = ThemeStyle;
+        Theme.Record = ThemeStyle;
+        Theme.Caption = ThemeStyle;
+        ExcelProperties.Theme = Theme;
+        await DefaultGrid.ExcelExport(ExcelProperties);
+    }
 
 
 #line default

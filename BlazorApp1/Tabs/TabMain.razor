@@ -14,7 +14,6 @@
                 </ChildContent>
                 <ContentTemplate>
                     <div class="div_contenedor">
-
                         <div class="div_centrado">
                             <SfCard ID="BasicCard" class="e-card">
                                 <CardHeader Title="Filtros de Consulta" />
@@ -27,39 +26,87 @@
                                             <div class="col-sm"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm"></div>
-                                            <div class="col-sm">
+                                            <div class="col-sm">Fecha</div>
+                                            <div class="col-sm-3">
                                                 <div id="datepicker-control">
                                                     <SfDatePicker TValue="DateTime?" Value="@fecact" Placeholder="Choose a Date"></SfDatePicker>
                                                 </div>
                                             </div>
-                                            <div class="col-sm">
+                                            <div class="col-sm-3">
                                                 <div id="datepicker-control">
                                                     <SfDatePicker TValue="DateTime?" Value="@fecact" Placeholder="Choose a Date"></SfDatePicker>
                                                 </div>
                                             </div>
-                                            <div class="col-sm"></div>
+                                            <div class="col-sm-3"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm">-</div>
-                                            <div class="col-sm">-</div>
-                                            <div class="col-sm">-</div>
+                                            <div class="col-sm">Referencia</div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='referencia ini'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='referencia fin'></SfTextBox>
+                                            </div>
                                             <div class="col-sm">-</div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-sm">Bodega</div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='bodega ini'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='bodega fin'></SfTextBox>
+                                            </div>
                                             <div class="col-sm">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">Cliente</div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='cliente ini'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='cliente fin'></SfTextBox>
+                                            </div>
                                             <div class="col-sm">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">Vendedor</div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='vendedor ini'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='vendedor fin'></SfTextBox>
+                                            </div>
                                             <div class="col-sm">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">Linea</div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='linea ini'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='linea fin'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">Grupos</div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='grupo ini'></SfTextBox>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <SfTextBox Placeholder='grupo fin'></SfTextBox>
+                                            </div>
                                             <div class="col-sm">-</div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm">
                                                 -
                                             </div>
-                                            <div class="col-sm">
+                                            <div class="col-sm-3">
                                                 <SfButton IsPrimary="true" @onclick="ClickEvent">Consultar</SfButton>
                                             </div>
-                                            <div class="col-sm">
+                                            <div class="col-sm-3">
                                                 <SfButton IsPrimary="true">Salir</SfButton>
                                             </div>
                                             <div class="col-sm">
@@ -73,7 +120,7 @@
                             </SfCard>
                         </div>
                         <div class="spiner">
-                            <SfSpinner  Visible="@VisibleProperty" Type="@SpinnerType.Material" Label="Cargando..." />
+                            <SfSpinner Visible="@VisibleProperty" Type="@SpinnerType.Material" Label="Cargando..." />
                         </div>
                     </div>
                 </ContentTemplate>
@@ -83,7 +130,7 @@
                     <TabHeader Text="Ventas Por Producto"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
-                    <VentasPorProducto Text="xdxd"></VentasPorProducto>
+                    <VentasPorProducto></VentasPorProducto>
                 </ContentTemplate>
             </TabItem>
             <TabItem>
@@ -91,7 +138,7 @@
                     <TabHeader Text="Ventas Por Bodega"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
-                    <VentasPorProducto></VentasPorProducto>
+                    <VentasPorBodega></VentasPorBodega>
                 </ContentTemplate>
             </TabItem>
             <TabItem>
@@ -99,7 +146,23 @@
                     <TabHeader Text="Ventas Por Cliente"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
-                    <VentasPorProducto></VentasPorProducto>
+                    <VentasPorCliente></VentasPorCliente>
+                </ContentTemplate>
+            </TabItem>
+            <TabItem>
+                <ChildContent>
+                    <TabHeader Text="Ventas Por Vendedor"></TabHeader>
+                </ChildContent>
+                <ContentTemplate>
+                    <VentasPorVendedor></VentasPorVendedor>
+                </ContentTemplate>
+            </TabItem>
+            <TabItem>
+                <ChildContent>
+                    <TabHeader Text="Ventas Por Linea"></TabHeader>
+                </ChildContent>
+                <ContentTemplate>
+                    <VentasPorLinea></VentasPorLinea>
                 </ContentTemplate>
             </TabItem>
         </TabItems>
@@ -109,27 +172,20 @@
 <style>
 
     .e-card {
-        width: 600px;
+        width: 700px;
         margin: auto;
+        top: 50px
     }
 
     .spiner {
         top: 300px;
-        position: absolute;        
+        position: absolute;
         left: 50%;
     }
-    /*  .div_contenedor {
-        height: 80vh;
-    }
 
-    .div_centrado {
-        background: yellow;
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 50%;
-        margin-top: -100px;
-    }*/
+   
+    
+
 </style>
 
 
