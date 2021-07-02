@@ -11,16 +11,39 @@ namespace BlazorApp1.Tabs
 {
     public partial class TabMain
     {
+
+        public PopUp TabPopUp;
+
         public int SelectedTab { get; set; } = 0;
         private bool VisibleProperty { get; set; } = false;
 
+        #region propiedades de la consulta
 
-        #region propiedades logicas        
+        public DateTime? fecini { get; set; } = DateTime.Now;
+        public DateTime? fecfin { get; set; } = DateTime.Now;
 
-        DateTime fecact = DateTime.Now;
+        public string Ref_ini { get; set; } = "";
+        public string Ref_fin { get; set; } = "";
+
+        public string Bod_ini { get; set; } = "";
+        public string Bod_fin { get; set; } = "";
+
+        public string Cli_ini { get; set; } = "";
+        public string Cli_fin { get; set; } = "";
+
+        public string Ven_ini { get; set; } = "";
+        public string Ven_fin { get; set; } = "";
+
+        public string Lin_ini { get; set; } = "";
+        public string Lin_fin { get; set; } = "";
+
+        public string Gru_ini { get; set; } = "";
+        public string Gru_fin { get; set; } = "";
+
+        #endregion
+
 
         Pshared sharecls = new Pshared();
-
         public class Pshared
         {
             public int productoRegistros { get; set; } = 0;
@@ -47,11 +70,10 @@ namespace BlazorApp1.Tabs
 
 
         }
-        #endregion
 
 
 
-        string conecction = "Data Source=64.250.116.210,8334;Initial Catalog=Aluwork_SiaApp;User ID=sa;Password=Q1w2e3r4*/*;";
+        string conecction = "Data Source=64.250.116.210,8334;Initial Catalog=Milanelo_SiaApp;User ID=sa;Password=Q1w2e3r4*/*;";
 
         protected override void OnInitialized()
         {
@@ -59,13 +81,134 @@ namespace BlazorApp1.Tabs
         }
 
 
+        private string ArmaWhere()
+        {
+            try
+            {
+
+                string cadenawhere = "";
+                string RefI = Ref_ini.Trim();
+                string RefF = Ref_fin.Trim();
+                string BodI = Bod_ini.Trim();
+                string BodF = Bod_fin.Trim();
+                string TerI = Cli_ini.Trim();
+                string VenI = Cli_fin.Trim();
+                string TipI = Lin_ini.Trim();
+                string TipF = Lin_fin.Trim();
+                string GruI = Gru_ini.Trim();
+                string GruF = Gru_fin.Trim();
+
+
+                //string ImpI = TextBoxImpI.Text.Trim();
+                if (!string.IsNullOrEmpty(RefI) && !string.IsNullOrEmpty(RefF))
+                {
+                    cadenawhere += " and  cue.cod_ref between '" + RefI + "' and '" + RefF + "'";
+                }
+                if (!string.IsNullOrEmpty(BodI) && !string.IsNullOrEmpty(BodF))
+                {
+                    cadenawhere += " and  cue.cod_bod between '" + BodI + "' and '" + BodF + "'";
+                }
+                if (!string.IsNullOrEmpty(TerI))
+                {
+                    cadenawhere += " and  cab.cod_cli='" + TerI + "'";
+                }
+                if (!string.IsNullOrEmpty(VenI))
+                {
+                    cadenawhere += " and  cab.cod_Ven='" + VenI + "'";
+                }
+
+                if (!string.IsNullOrEmpty(TipI) && !string.IsNullOrEmpty(TipF))
+                {
+                    cadenawhere += " and  ref.cod_tip between '" + TipI + "' and '" + TipF + "'";
+                }
+                if (!string.IsNullOrEmpty(GruI) && !string.IsNullOrEmpty(GruF))
+                {
+                    cadenawhere += " and  ref.cod_gru between '" + GruI + "' and '" + GruF + "'";
+                }
+
+                return cadenawhere;
+
+
+            }
+            catch (Exception w)
+            {
+                Console.WriteLine("ERRRRROR:" + w);
+                return "";
+            }
+
+        }
+
+        public void BtnOpenSearch(string tipo)
+        {
+            try
+            {
+
+                Console.WriteLine(tipo);
+
+                string tabla = "";
+                string codigo = "";
+                string nombre = "";
+                string where = "";
+
+
+                switch (tipo)
+                {
+                    case "referencia":
+                        tabla = "inmae_ref"; codigo = "cod_ref"; nombre = "nom_ref";
+                        break;
+                    case "bodega":
+                        tabla = "inmae_bod"; codigo = "cod_bod"; nombre = "nom_bod";
+                        break;
+                    case "cliente":
+                        tabla = "comae_ter"; codigo = "cod_ter"; nombre = "nom_ter";
+                        break;
+                }
+
+
+                //TabPopUp.ClickBtn = ClickLoadMessage("");
+                TabPopUp.OpenPopUp(tabla, codigo, nombre, where, tipo);
+
+
+            }
+            catch (Exception w)
+            {
+                Console.WriteLine("error openSearch:" + w);
+            }
+        }
+
+
+        public void ClickLoadMessage(string tipo,string codigo)
+        {
+
+            switch (tipo)
+            {
+                case "referencia":
+                    Ref_ini = codigo;
+                    Ref_fin = codigo;
+                    break;
+                case "bodega":
+                    Bod_ini = codigo;
+                    Bod_fin = codigo;
+                    break;
+                case "cliente":
+                    Ref_ini = codigo;
+                    Ref_fin = codigo;
+                    break;
+            }
+            StateHasChanged();
+        }
+
+
         private async void ClickEvent(MouseEventArgs args)
         {
             try
             {
+
+
                 VisibleProperty = true;
 
-                var slowTask = Task<Data>.Factory.StartNew(() => GetAll("01/01/2021", "11/01/2021"));
+                string where = ArmaWhere();
+                var slowTask = Task<Data>.Factory.StartNew(() => GetAll(fecini.ToString(), fecfin.ToString(), where));
                 await slowTask;
 
                 if (slowTask.IsCompleted)
@@ -103,7 +246,9 @@ namespace BlazorApp1.Tabs
             }
         }
 
-        public Data GetAll(string fec_ini, string fec_fin)
+
+
+        public Data GetAll(string fec_ini, string fec_fin, string where)
         {
             using (SqlConnection cnn = new SqlConnection(conecction))
             {
@@ -115,7 +260,7 @@ namespace BlazorApp1.Tabs
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@FechaIni", fec_ini);
                 cmd.Parameters.AddWithValue("@FechaFin", fec_fin);
-                cmd.Parameters.AddWithValue("@Where", "");
+                cmd.Parameters.AddWithValue("@Where", where);
                 cmd.Parameters.AddWithValue("@codemp", "010");
                 da = new SqlDataAdapter(cmd);
                 da.SelectCommand.CommandTimeout = 0;
@@ -193,8 +338,8 @@ namespace BlazorApp1.Tabs
                 foreach (DataRow dr in ds.Tables[4].Rows)
                 {
                     Linea linea = new Linea();
-                    linea.cod_tip = dr["cod_tip"].ToString().Trim();
-                    linea.nom_tip = dr["nom_tip"].ToString().Trim();
+                    linea.cod_tip = dr["cod_mar"].ToString().Trim();
+                    linea.nom_tip = dr["nom_mar"].ToString().Trim();
                     linea.cantidad = Convert.ToDecimal(dr["cantidad"]);
                     linea.can_dev = Convert.ToDecimal(dr["can_dev"]);
                     linea.neto = Convert.ToDecimal(dr["neto"]);
@@ -250,7 +395,7 @@ namespace BlazorApp1.Tabs
         {
             public string cod_bod { get; set; }
             public string nom_bod { get; set; }
-                        
+
         }
 
         public class Cliente : Ventas

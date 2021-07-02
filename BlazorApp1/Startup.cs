@@ -32,6 +32,9 @@ namespace BlazorApp1
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSyncfusionBlazor();
+            services.AddSignalR(e => {
+                e.MaximumReceiveMessageSize = 65536;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

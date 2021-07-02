@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/KB3q9QGOiEE1N9wZ5PHm2a4JXy3EyJCXGuU4WQSs0C04ASxsZ+VZpBYhY+K+AfH0A6vxEcMjPfljRfNHbTS3Q==",
+  "dgSpecHash": "RNytBIw+v1SwArjaBucn496mry3W0sh8Hf1tMdmB6R/nof4o89/xCdaqckjvsJIkEfftTHuywRiZADbUICLL3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleja\\Desktop\\UTIL\\blazor\\BlazorApp1\\BlazorApp1.csproj",
+  "projectFilePath": "D:\\UTIL\\blazor\\BlazorApp1\\BlazorApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.8\\microsoft.aspnetcore.authorization.3.1.8.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.8\\microsoft.aspnetcore.components.3.1.8.nupkg.sha512",
@@ -26,7 +26,7 @@
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
-    "C:\\Users\\aleja\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\aleja\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\aleja\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

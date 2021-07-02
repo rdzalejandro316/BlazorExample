@@ -64,7 +64,13 @@
     <SfButton CssClass="BtnExport" OnClick="ExcelExport" Content="Excel"></SfButton>
 </div>
 
-
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@sFather.bodega" XName="nom_bod" YName="neto" Type="ChartSeriesType.SplineArea">            
+        </ChartSeries>
+</ChartSeriesCollection>
+</SfChart>
 
 
 @if (sFather.bodega == null)
