@@ -111,29 +111,15 @@ using Syncfusion.Blazor.Charts;
 #line hidden
 #nullable disable
 #nullable restore
+#line 15 "D:\UTIL\blazor\BlazorApp1\_Imports.razor"
+using Syncfusion.Blazor.Cards;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 16 "D:\UTIL\blazor\BlazorApp1\_Imports.razor"
 using Syncfusion.Blazor.Popups;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 1 "D:\UTIL\blazor\BlazorApp1\Tabs\VentasPorBodega.razor"
-using static BlazorApp1.Shared.MainLayout;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "D:\UTIL\blazor\BlazorApp1\Tabs\VentasPorBodega.razor"
-using static BlazorApp1.Tabs.TabMain;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "D:\UTIL\blazor\BlazorApp1\Tabs\VentasPorBodega.razor"
-using Syncfusion.Blazor.Cards;
 
 #line default
 #line hidden
@@ -145,43 +131,6 @@ using Syncfusion.Blazor.Cards;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 102 "D:\UTIL\blazor\BlazorApp1\Tabs\VentasPorBodega.razor"
-       
-
-    [CascadingParameter]
-    public Pshared sFather { get; set; }
-
-    public int Registros = 0;
-    public decimal Cantidades = 0;
-
-
-    private SfGrid<TabMain.Bodega> DefaultGrid;
-
-
-    public async Task ExcelExport()
-    {
-        ExcelExportProperties ExcelProperties = new ExcelExportProperties();
-        ExcelTheme Theme = new ExcelTheme();
-
-        ExcelStyle ThemeStyle = new ExcelStyle()
-        {
-            FontName = "Segoe UI",
-            FontColor = "#666666",
-            FontSize = 12
-        };
-
-        Theme.Header = ThemeStyle;
-        Theme.Record = ThemeStyle;
-        Theme.Caption = ThemeStyle;
-        ExcelProperties.Theme = Theme;
-        await DefaultGrid.ExcelExport(ExcelProperties);
-    }
-
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591
